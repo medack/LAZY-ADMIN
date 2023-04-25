@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MitigationPolicy>
+  <AppConfig Executable="excel.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" PreferSystem32="true" />
+  </AppConfig>
+  <AppConfig Executable="fltldr.EXE">
+    <ImageLoad BlockRemoteImageLoads="true" />
+    <ChildProcess DisallowChildProcessCreation="true" />
+  </AppConfig>
+  <AppConfig Executable="java.exe">
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="javaw.exe">
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="javaws.exe">
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="KeePassXC.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" PreferSystem32="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="msedge.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+  <AppConfig Executable="powerpnt.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+  <AppConfig Executable="teams.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+  <AppConfig Executable="winword.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" PreferSystem32="true" />
+  </AppConfig>
+  <AppConfig Executable="zoom.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="true" Audit="false" />
+    <SignedBinaries EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+</MitigationPolicy>
