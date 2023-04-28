@@ -12,9 +12,9 @@ While you are free to use the script however you want, I have noticed that colla
 ## ROADMAP
 - [ ] Add the ability to create backups (i. e. registry) and to restore them.
 - [ ] Add the ability to fetch the latest versions of WindowsSpyBlocker and hosts (oisd) files and include them in the script.
-- [ ] Add the ability to search for custom executable locations to CFA.
-- [ ] Add more common CFA exclusions - this would mainly depend on feedback.
-- [ ] Comment the changes being made and the source of their documentation.
+- [ ] Add more common CFA exclusions (mainly dependant on feedback) and the ability to search for custom executable locations to CFA
+- [ ] Add WDAC block rules (for future reference https://mattifestation.medium.com/windows-defender-application-control-wdac-updates-in-20h2-and-building-a-simple-secure-4fd4ee86de4).
+- [ ] Comment the changes being made and their source documentation.
 - [ ] Convert the script to PowerShell (cleaner code?).
 - [ ] Convert Group Policy reg keys into real GPOs (using PolicyPlus?) and add them to the script.
-- [ ] Convert 'service' commands to reg keys - this would allow to disable services that refuse to be disabled with 'service' (while using cmd).
+- [ ] Convert 'service' commands to reg keys - this would allow to disable services that refuse to be disabled with 'service' (at least while using cmd).
